@@ -1,6 +1,7 @@
 package geometry;
 
 import mars.geometry.Vector;
+import mars.utils.Numeric;
 
 public class Vector3 {
 	
@@ -101,7 +102,7 @@ public class Vector3 {
 		double theta 	= Spherical3.fromV3(this).theta();
 		
 		return Vector.polar(
-				2.0 * r * Math.tan(Transform.turn2Rad((0.5 - theta) * 0.5)), phi);
+				2.0 * r * Numeric.tanT((0.5 - theta) * 0.5), phi);
 	}
 	
 	/** Returns distance between vectors. */
