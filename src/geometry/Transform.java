@@ -1,16 +1,8 @@
 package geometry;
 
+import mars.utils.Numeric;
+
 public class Transform {
-	
-	/** Convert angle in radians to turns.
-	 * @param x angle in radians 
-	 */
-	public static double rad2Turn(double x) { return x / (2 * Math.PI); }
-	
-	/** Convert angle in turns to radians.
-	 * @param x angle in turns 
-	 */
-	public static double turn2Rad(double x) { return x * (2 * Math.PI); }
 
 	/** Compute rotation of vector in space around the axis by angle of
 	 *  rotation using Rodrigues' formula.
@@ -22,8 +14,8 @@ public class Transform {
 
 		Vector3 k = w.norm();
 		
-		double sin = Math.sin(turn2Rad(beta));
-		double cos = Math.cos(turn2Rad(beta));
+		double sin = Numeric.sinT(beta);
+		double cos = Numeric.cosT(beta);
 		
 		Vector3 u = v.scale(cos).add(k.cross(v).scale(sin)).add(k.scale(k.dot(v) * (1 - cos)));
 		

@@ -1,5 +1,7 @@
 package geometry;
 
+import mars.utils.Numeric;
+
 public class Spherical3 {
 
 	/** Cartesian coordinates. */
@@ -34,8 +36,8 @@ public class Spherical3 {
 		double x = v.x();	double y = v.y();	double z = v.z();
 		
 		double r = Math.sqrt(x*x + y*y + z*z);
-		double phi = Transform.rad2Turn(Math.atan2(y, x));
-		double theta = Transform.rad2Turn(Math.atan2(Math.sqrt(x*x + y*y), z));
+		double phi = Numeric.atan2T(y, x);
+		double theta = Numeric.atan2T(Math.sqrt(x*x + y*y), z);
 		
 		return new Spherical3(r, theta, phi);
 	}

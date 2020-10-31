@@ -89,7 +89,7 @@ public class Vector3 {
 	 * @param v Vector3   
 	 */
 	public double angle(Vector3 v) {
-		return Transform.rad2Turn(Math.acos(dot(v) / (mag() * v.mag())));
+		return Numeric.acosT(dot(v) / (mag() * v.mag()));
 	}
 	
 	/** Performs stereographic azimuthal projection onto plane parallel
