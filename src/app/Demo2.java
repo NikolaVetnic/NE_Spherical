@@ -9,25 +9,12 @@ import mars.drawingx.application.DrawingApplication;
 import mars.drawingx.drawing.Drawing;
 import mars.drawingx.drawing.DrawingUtils;
 import mars.drawingx.drawing.View;
-import mars.drawingx.gadgets.annotations.GadgetAnimation;
 import mars.drawingx.gadgets.annotations.GadgetDouble;
 
 public class Demo2 implements Drawing {
 	
-	@GadgetAnimation(speed = .25)
-	double time = 0.0;
-	
 	@GadgetDouble(min = 0.0, max = 10000.0)
 	double r = 1000.0;
-	
-	@GadgetDouble(min = -1., max = 1.0)
-	double x = 0.0;
-
-	@GadgetDouble(min = -1., max = 1.0)
-	double y = 0.0;
-
-	@GadgetDouble(min = 0.0, max = 1.0)
-	double z = 0.0;
 
 	@Override
 	public void draw(View view) {
