@@ -20,9 +20,9 @@ public class Spherical3 {
 		this.theta 	= theta;
 		this.phi 	= phi;
 		
-		double x = r * Math.cos(theta) * Math.sin(phi);
-		double y = r * Math.sin(theta) * Math.sin(phi);
-		double z = r * Math.cos(phi);
+		double x = r * Numeric.cosT(theta) * Numeric.sinT(phi);
+		double y = r * Numeric.sinT(theta) * Numeric.sinT(phi);
+		double z = r * Numeric.cosT(phi);
 		
 		this.v = Vector3.XYZ(x, y, z);
 	}
@@ -49,6 +49,9 @@ public class Spherical3 {
 	public void print() {
 		System.out.println(this);
 	}
+	
+	public void rotateTheta(double ang) 	{ this.theta += ang; 	}
+	public void rotatePhi(double ang) 		{ this.phi += ang; 		}
 	
 	public Vector3 v() 		{ return v; 	}
 	public double r() 		{ return r; 	}

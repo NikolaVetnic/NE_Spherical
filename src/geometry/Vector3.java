@@ -9,22 +9,22 @@ public class Vector3 {
 	public static final Vector3 ZERO = Vector3.XYZ(0, 0, 0);
 	
 	/** First canonical vector (coordinates: 1, 0, 0). */
-	public static final Vector3 PLUS_X = Vector3.XYZ(1, 0, 0);
+	public static final Vector3 PLUS_I = Vector3.XYZ(1, 0, 0);
 	
 	/** Opposite of the first canonical vector (coordinates: -1, 0, 0). */
-	public static final Vector3 MINUS_X = Vector3.XYZ(-1, 0, 0);
+	public static final Vector3 MINUS_I = Vector3.XYZ(-1, 0, 0);
 
 	/** Second canonical vector (coordinates: 1, 0, 0). */
-	public static final Vector3 PLUS_Y = Vector3.XYZ(1, 0, 0);
+	public static final Vector3 PLUS_J = Vector3.XYZ(0, 1, 0);
 	
 	/** Opposite of the second canonical vector (coordinates: -1, 0, 0). */
-	public static final Vector3 MINUS_Y = Vector3.XYZ(-1, 0, 0);
+	public static final Vector3 MINUS_J = Vector3.XYZ(0, -1, 0);
 
 	/** Third canonical vector (coordinates: 0, 0, 1). */
-	public static final Vector3 PLUS_Z = Vector3.XYZ(0, 0, 1);
+	public static final Vector3 PLUS_K = Vector3.XYZ(0, 0, 1);
 	
 	/** Opposite of the third canonical vector (coordinates: 0, 0, -1). */
-	public static final Vector3 MINUS_Z = Vector3.XYZ(0, 0, -1);
+	public static final Vector3 MINUS_K = Vector3.XYZ(0, 0, -1);
 	
 	/** Abscissa. */
 	private double x; 
