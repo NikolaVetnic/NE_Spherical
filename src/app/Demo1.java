@@ -37,12 +37,12 @@ public class Demo1 implements Drawing {
 			for (int i = 0; i < 100; i++) {
 				
 				// red circles
-				Vector3 k = Vector3.XYZ(
+				Vector3 k = Vector3.xyz(
 						Math.sin(time) * 2., 
 						Math.sin(time) * 4., 
 						Math.cos(time) * 1.);
 				
-				Vector3 v = Vector3.XYZ(
+				Vector3 v = Vector3.xyz(
 						0, 
 						100 + r * Math.sin(time) * (50.0 * j / 10), 
 						0);
@@ -60,12 +60,12 @@ public class Demo1 implements Drawing {
 				view.fillCircleCentered(t1.scale(.25).project(), 2.5);
 				
 				// blue circles
-				Vector3 l = Vector3.XYZ(
+				Vector3 l = Vector3.xyz(
 						Math.sin(time) * 1.,
 						Math.sin(time) * 2.,
 						Math.cos(time) * 4.);
 				
-				Vector3 w = Vector3.XYZ(
+				Vector3 w = Vector3.xyz(
 						xx, 
 						100 + r * Math.sin(time) * (25.0 * j / 10), 
 						-25);

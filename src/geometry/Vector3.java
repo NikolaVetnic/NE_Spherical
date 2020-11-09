@@ -6,25 +6,25 @@ import mars.utils.Numeric;
 public class Vector3 {
 	
 	/** Null vector (coordinates: 0, 0, 0). */
-	public static final Vector3 ZERO = Vector3.XYZ(0, 0, 0);
+	public static final Vector3 ZERO = Vector3.xyz(0, 0, 0);
 	
 	/** First canonical vector (coordinates: 1, 0, 0). */
-	public static final Vector3 PLUS_I = Vector3.XYZ(1, 0, 0);
+	public static final Vector3 PLUS_I = Vector3.xyz(1, 0, 0);
 	
 	/** Opposite of the first canonical vector (coordinates: -1, 0, 0). */
-	public static final Vector3 MINUS_I = Vector3.XYZ(-1, 0, 0);
+	public static final Vector3 MINUS_I = Vector3.xyz(-1, 0, 0);
 
 	/** Second canonical vector (coordinates: 1, 0, 0). */
-	public static final Vector3 PLUS_J = Vector3.XYZ(0, 1, 0);
+	public static final Vector3 PLUS_J = Vector3.xyz(0, 1, 0);
 	
 	/** Opposite of the second canonical vector (coordinates: -1, 0, 0). */
-	public static final Vector3 MINUS_J = Vector3.XYZ(0, -1, 0);
+	public static final Vector3 MINUS_J = Vector3.xyz(0, -1, 0);
 
 	/** Third canonical vector (coordinates: 0, 0, 1). */
-	public static final Vector3 PLUS_K = Vector3.XYZ(0, 0, 1);
+	public static final Vector3 PLUS_K = Vector3.xyz(0, 0, 1);
 	
 	/** Opposite of the third canonical vector (coordinates: 0, 0, -1). */
-	public static final Vector3 MINUS_K = Vector3.XYZ(0, 0, -1);
+	public static final Vector3 MINUS_K = Vector3.xyz(0, 0, -1);
 	
 	/** Abscissa. */
 	private double x; 
@@ -39,7 +39,7 @@ public class Vector3 {
 		this.z = z;
 	}
 	
-	public static Vector3 XYZ(double x, double y, double z) {
+	public static Vector3 xyz(double x, double y, double z) {
 		return new Vector3(x, y, z);
 	}
 	
@@ -50,23 +50,23 @@ public class Vector3 {
 	
 	/** Copy this vector to a new instance of Vector3. */
 	public Vector3 cop() {
-		return XYZ(this.x(), this.y(), this.z());
+		return xyz(this.x(), this.y(), this.z());
 	}
 	
 	public Vector3 neg() {
-		return XYZ(-this.x(), -this.y(), -this.z());
+		return xyz(-this.x(), -this.y(), -this.z());
 	}
 	
 	public Vector3 add(Vector3 v) {
-		return XYZ(this.x + v.x(), this.y + v.y(), this.z + v.z());
+		return xyz(this.x + v.x(), this.y + v.y(), this.z + v.z());
 	}
 
 	public Vector3 sub(Vector3 v) {
-		return XYZ(this.x - v.x(), this.y - v.y(), this.z - v.z());
+		return xyz(this.x - v.x(), this.y - v.y(), this.z - v.z());
 	}
 	
 	public Vector3 scale(double a) {
-		return XYZ(this.x * a, this.y * a, this.z * a);
+		return xyz(this.x * a, this.y * a, this.z * a);
 	}
 	
 	public double dot(Vector3 v) {
@@ -74,11 +74,11 @@ public class Vector3 {
 	}
 	
 	public Vector3 cross(Vector3 v) {
-		return XYZ(y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x);
+		return xyz(y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x);
 	}
 	
 	public Vector3 norm() {
-		return XYZ(x / mag(), y / mag(), z / mag());
+		return xyz(x / mag(), y / mag(), z / mag());
 	}
 	
 	public double mag() {

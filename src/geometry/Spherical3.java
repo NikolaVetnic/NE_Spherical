@@ -20,14 +20,18 @@ public class Spherical3 {
 		this.theta 	= theta;
 		this.phi 	= phi;
 		
-		double x = r * Numeric.cosT(theta) * Numeric.sinT(phi);
-		double y = r * Numeric.sinT(theta) * Numeric.sinT(phi);
-		double z = r * Numeric.cosT(phi);
+//		double x = r * Numeric.cosT(theta) * Numeric.sinT(phi);
+//		double y = r * Numeric.sinT(theta) * Numeric.sinT(phi);
+//		double z = r * Numeric.cosT(phi);
+
+		double x = r * Numeric.cosT(phi) * Numeric.sinT(theta);
+		double y = r * Numeric.sinT(phi) * Numeric.sinT(theta);
+		double z = r * Numeric.cosT(theta);
 		
-		this.v = Vector3.XYZ(x, y, z);
+		this.v = Vector3.xyz(x, y, z);
 	}
 	
-	public static Spherical3 RTP(double r, double theta, double phi) {
+	public static Spherical3 rtp(double r, double theta, double phi) {
 		return new Spherical3(r, theta, phi);
 	}
 	
